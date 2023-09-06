@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-inter: Inter;
+    --font-georgia: Georgia;
+  
+    /* font sizes */
+    --font-size-21xl: 2.5rem;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-cadetblue: #1aa6bd;
+  }

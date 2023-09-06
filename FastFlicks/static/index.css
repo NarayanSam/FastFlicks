@@ -1,0 +1,177 @@
+.desktop-1-child,
+.desktop-1-item {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+}
+.desktop-1-child {
+  top: 0;
+  background-color: var(--color-white);
+  height: 13.8%;
+}
+.desktop-1-item {
+  top: 13.65%;
+  background: linear-gradient(
+    89.92deg,
+    #1aa6bd,
+    #1bacbf 20.83%,
+    #1bb0b9 50.52%,
+    #1db8b4 75%,
+    #1db4ac
+  );
+  border: 1% solid var(--color-white);
+  box-sizing: border-box;
+  height: 33.5%;
+}
+/*.desktop-1-inner*/
+.desktop-1-inner1 {
+  position: absolute;
+  top: 27.7%;
+  left: 15%;
+  background-color: #f5f5f5;
+  width: 65.2%;
+  height: 7.63rem;
+  border-color: #f5f5f5;
+  font-size: 100%;
+  padding-left: 3%;
+}
+
+::placeholder{
+    font-size: 90%;
+    font-style: italic;
+    font-family: initial;
+    opacity: 65%;
+}
+
+.search{
+    position: absolute;
+    top: 26%;
+    left: 71%;
+    height: 15%;
+    width: 10%;
+    opacity: 80%;
+}
+.get-the-summary {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  font-size: 270%;
+  display: inline-block;
+  width: 91.3%;
+  height: 83%;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.image-1-icon {
+  position: absolute;
+  bottom: 43%;
+  left: 75%;
+  width: 22%;
+  height:100%;
+  object-fit: cover;
+}
+.get-the-summary-of-youtube-vid-parent {
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  width: 50.6%;
+  height:20.18%;
+  color: var(--color-white);
+}
+.fastflicks-logo-1-icon {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 20%;
+  height:32%;
+  object-fit: cover;
+}
+.about,
+.contact-us {
+  position: absolute;
+  top: 8.2%;
+  left: 62%;
+  font-family: var(--font-georgia);
+  display: inline-block;
+  width: 25%;
+  height: 15%;
+  font-size: 170%;
+  color: #1aa6bd;
+}
+.contact-us {
+  left: 75%;
+  
+}
+/*.paste-the-url {
+  position: absolute;
+  top: 20.63rem;
+  left: 17.19rem;
+  font-size: 1.75rem;
+  font-weight: 100;
+  color: #000;
+}*/
+.desktop-1 {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 64rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-cadetblue);
+  font-family: var(--font-inter);
+}
+.Abt-container{
+    position: absolute;
+    top: 100%;
+    height: 8%;
+    width: 100%;
+    background-color: #1aa6bd;
+    display: inline-block;    
+}
+
+.about1{
+    color: var(--color-white);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 200%;
+    padding-left: 2%;
+    padding-top: 0.8%;
+    display: inline-block;
+    font-family: var(--font-georgia);
+}
+
+.abt-box{
+    position: absolute;
+    top: 108%;
+    background-color:whitesmoke;
+    width: 100%;
+}
+.intro{
+    color:black;
+    font-size: 250%;
+}
+
+.text{
+    color: #1aa6bd;
+    font-size: 150%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+}
+a:visited{
+    color: #1aa6bd;
+    text-decoration: none;
+}
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

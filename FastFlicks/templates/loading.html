@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .loading-wrapper {
+      display: flex;
+      align-items: center;
+      padding-top: 20%;
+      justify-content: center;
+    }
+    .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 2s linear infinite;
+        text-align: center;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      </style>
+    <title>Loading...</title>
+</head>
+<body>
+    
+    <div class="loading-wrapper"><div class="loader"></div></div>
+    <div id="result" style="display: none;"></div>
+
+    <script>
+        function checkTranscriptionStatus() {
+            fetch('/transcribe', {
+                method: 'POST',
+                body: new URLSearchParams(new FormData(document.getElementById('transcriptionForm')))
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'completed') {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('result').style.display = 'block';
+                    document.getElementById('result').innerHTML = `<h1>${data.title}</h1><p>${data.summary}</p>`;
+                } else {
+                    setTimeout(checkTranscriptionStatus, 2000); // Check again after 2 seconds
+                }
+            });
+        }
+
+        // Call checkTranscriptionStatus when the page is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('loading').style.display = 'block';
+            checkTranscriptionStatus();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="index.css" >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,600;1,100&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Georgia:wght@400&display=swap"
+    />
+  </head>
+  
+  <body>
+    <div class="desktop-1">
+      <div class="desktop-1-child"></div>
+      <div class="desktop-1-item"></div>
+      <form action="/transcribe" method="post">     <!-- <div class="desktop-1-inner">-->
+       <!--<a href="" ><img class="search" src="/search.png" /></a>--> 
+       <input type="text" type="text" name="url" id="url" required class="desktop-1-inner1" placeholder="Paste the URL of the youtube video">
+       
+       <input type="submit" value="Transcribe">
+       
+       <!-- <i class="paste-the-url">Paste the URL of the youtube video</i>-->
+      </div>
+    </form>
+    <div id="loading" style="display: none;">
+      <h2>Loading...</h2>
+      <div class="loader"></div>
+  </div>
+
+  <script>
+      function showLoading() {
+          document.getElementById("loading").style.display = "block";
+      }
+  </script>
+
+      <div class="get-the-summary-of-youtube-vid-parent">
+        <div class="get-the-summary">Get the Summary of Youtube Video</div>
+        <img class="image-1-icon" alt="" src="{{ url_for('static', filename='images/youtube.png') }}" />
+      </div>
+      <img
+        class="fastflicks-logo-1-icon"
+        alt=""
+        src="{{ url_for('static', filename='images/fastflick.png') }}"
+      />
+
+      <div class="about">
+       <a href="#txth"> About</a></div>
+      <div class="contact-us">
+        <a href="{{ url_for('feedback') }}"> Contact Us </a></div>
+      <!--<i class="paste-the-url">Paste the URL of the youtube video</i>-->
+    </div>
+    <div class="Abt-container">
+        <div class="about1" id="txth">Introducing : FastFlicks (The Ultimate YouTube Video Summarizer)</div>
+      </div>
+      <div class="abt-box">
+       <!-- <h4 class="intro">Introducing : FastFlicks (The Ultimate YouTube Video Summarizer)</h4>-->
+       <br>
+
+        <div class="text" id="txt1">Are you tired of spending hours watching lengthy YouTube videos, trying to
+            ﬁnd the information you need? Well, your search for a time-saving solution
+            ends here! Welcome to our revolutionary YouTube Video Summarizer!
+            <br>
+            <br>
+            Our cutting-edge tool is designed to condense hours of video content into
+            concise and easily digestible summaries, capturing the essence of each video
+            in just a fraction of the time. Whether you're a student, a professional, or
+            simply an avid learner, our Video Summarizer will transform the way you
+            consume YouTube content.
+            <br>
+            <br>
+            Say goodbye to endless scrolling and jumping through video timelines. With
+            our intelligent algorithm, you'll receive a comprehensive overview of the video's
+            key points, highlights, and takeaways, all in one place. We value your time and
+            understand the importance of eﬃciency, which is why our Summarizer
+            ensures you get the information you seek without sacriﬁcing depth or
+            accuracy.
+            <br>
+            <br>
+            Here's how it works: just paste the YouTube video URL into our user-friendly
+            interface, and within seconds, you'll have a well-structured summary right at
+            your ﬁngertips. Our Summarizer supports a wide range of subjects, from
+            educational tutorials and tech reviews to captivating vlogs and
+            thought-provoking documentaries.
+            <br>
+            <br>
+            <i><b>Embrace a smarter way to learn, stay informed, and make the most out of your
+            valuable time.</b></i>
+            <br>
+            <br>
+            Are you ready to take your YouTube experience to the next level? Click the link
+            below and let the summarizing begin!
+         </div>
+    </div>
+
+  </body>
+</html>
